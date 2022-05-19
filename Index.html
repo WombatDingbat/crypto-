@@ -16,37 +16,14 @@
       <input type="number" class="input" placeholder="Watts"/><br>
       <input type="number" class="input" placeholder="Electricity costs Kwh"/><br>
       <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">Currency</button>
-        <div id="myDropdown" class="dropdown-content">
-          <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
-          <a class="content" href="#about">ALL</a>
-          <a class="content" href="#base">AFN</a>
-          <a class="content" href="#blog">ARS</a>
-          <a class="content" href="#contact">AWG</a>
-          <a class="content" href="#custom">AUD</a>
-          <a class="content" href="#support">AZN</a>
-          <a class="content" href="#tools">BSD</a>
-        </div>
-        <script type="text/javascript" charset="utf-8">
-          function myFunction() {
-           document.getElementById("myDropdown").classList.toggle("show");
-          }
-          function filterFunction() {
-            var input, filter, ul, li, a, i;
-            input = document.getElementById("myInput");
-            filter = input.value.toUpperCase();
-            div = document.getElementById("myDropdown");
-            a = div.getElementsByTagName("a");
-            for (i = 0; i < a.length; i++) {
-              txtValue = a[i].textContent || a[i].innerText;
-              if (txtValue.toUpperCase().indexOf(filter) > -1) {
-                a[i].style.display = "";
-              } else {
-                a[i].style.display = "none";
-              }
-            }
-          }
-        </script>
+        <select class="mdb-select-md-form" searchable="Search here..">
+          <option value="" disabled selected>Choose Currency</option>
+          <option value="1">USA</option>
+          <option value="2">Germany</option>
+          <option value="3">France</option>
+          <option value="3">Poland</option>
+          <option value="3">Japan</option>
+        </select>
       </div>
     </div>    <div class="answer">
       
